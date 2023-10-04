@@ -1,0 +1,27 @@
+##
+## To test using this file
+##
+## 1. Ensure you have VS Code Plugin REST Client installed
+## 2. Run azure function locally
+##      $ func start
+##
+## 3. Open this file and run each request VSCode
+##
+
+## Azure Local Function Version
+POST http://localhost:7071/api/autoMessage HTTP/1.1
+content-type: application/x-www-form-urlencoded
+
+From=one&To=two&Body=apply wotc
+
+###
+
+## Test HTTPS via ngrok
+## install ngrok cli
+## run azure function locally first
+## and then run $ ngrok http 3000
+## and update the url below
+POST https://21b0-199-68-126-2.ngrok-free.app/api/autoMessage HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+From=one&To=two&Body=asdasd
